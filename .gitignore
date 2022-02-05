@@ -6,6 +6,7 @@
 *.iws
 .classpath
 .project
+.vscode
 /target
 /test-output
 /classes
