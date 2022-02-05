@@ -6,10 +6,11 @@
 *.iws
 .classpath
 .project
-.vscode
 /target
 /test-output
 /classes
 /log
 /bin/
 /allure-results
+.vscode
+.idea
