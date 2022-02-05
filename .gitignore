@@ -1,0 +1,14 @@
+.settings
+.idea
+.allure
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+/target
+/test-output
+/classes
+/log
+/bin/
+/allure-results

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Component Suite" thread-count="1" parallel="classes" preserve-order="true" allow-return-values="true" verbose="1">
+    <listeners>
+        <listener class-name="com.goaudits.automation.framework.api.reporter.HTMLReporter"/>
+        <listener class-name="com.goaudits.automation.framework.api.reporter.SeverityAppender"/>
+        <listener class-name="com.goaudits.automation.framework.api.reporter.MDCAppender"/>
+        <listener class-name="com.goaudits.automation.framework.api.reporter.ExceptionReporter"/>
+    </listeners>
+    <test name="Login and Registration Tests">
+        <classes>
+
+            <class name="com.goaudits.automation.api.tests.loginandRegistration.SignIn_Tests"/>
+        </classes>
+    </test>
+</suite>
