@@ -1,7 +1,7 @@
 package com.goaudits.automation.framework.api.utils;
 
 
-import com.goaudits.automation.framework.api.modules.salaried.Document;
+import com.goaudits.automation.framework.api.modules.Documents.Document;
 
 public interface DocumentType {
     Document getDocument();
