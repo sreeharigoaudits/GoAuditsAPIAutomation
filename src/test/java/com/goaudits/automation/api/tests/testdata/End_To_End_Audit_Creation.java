@@ -28,7 +28,7 @@ public class End_To_End_Audit_Creation extends setUp {
     @Test
     public void End_To_End_Audit_Creation() throws Exception {
 
-        LoginAndRegistrationBuilder.builder(actions).signIn().build();
+        LoginAndRegistrationBuilder.builder(actions).performAudit().build();
 
     }
 }

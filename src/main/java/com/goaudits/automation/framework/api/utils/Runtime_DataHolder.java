@@ -15,7 +15,13 @@ public class Runtime_DataHolder {
     private static Object object;
     private static List<Object> objectList;
     private static JsonArray jsonArrayObject;
-
+    private static String CompanyID;
+    private static String CompanyName;
+    private static String LocationName;
+    private static String LocationID;
+    private static String AuditNameID;
+    private static String AuditName;
+    private static String SeqNo;
 
     static {
         init();
@@ -51,7 +57,55 @@ public class Runtime_DataHolder {
     public static String getAuthToken() {
         return AuthToken;
     }
+    public static String getCompanyID() {
+        return CompanyID;
+    }
 
+    public static void setCompanyID(String companyID) {
+        CompanyID = companyID;
+    }
+    public static String getCompanyName() {
+        return CompanyName;
+    }
+
+    public static void setCompanyName(String companyName) {
+        CompanyName = companyName;
+    }
+
+    public static String getLocationName() {
+        return LocationName;
+    }
+
+    public static void setLocationName(String locationName) {
+        LocationName = locationName;
+    }
+    public static String getAuditName() {
+        return AuditName;
+    }
+
+    public static void setAuditName(String auditName) {
+        AuditName = auditName;
+    }
+    public static String getAuditNameID() {
+        return AuditNameID;
+    }
+
+    public static void setAuditNameID(String auditNameID) {
+        AuditNameID = auditNameID;
+    }
+    public static String getLocationID() {
+        return LocationID;
+    }
+    public static String getSeqNo() {
+        return SeqNo;
+    }
+
+    public static void setSeqNo(String seqNo) {
+        SeqNo = seqNo;
+    }
+    public static void setLocationID(String locationID) {
+        LocationID = locationID;
+    }
     public static void setAuthToken(String authToken) {
         AuthToken = authToken;
     }

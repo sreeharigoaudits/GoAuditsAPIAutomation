@@ -9,10 +9,6 @@ import groovy.util.logging.Slf4j;
 @Slf4j
 public class Enumerations {
 
-
-
-
-
     public enum RESOURCE_FILE {
         PDF("sample.pdf"), PNG("00.png"), TXT("dumpfile.dump"),MP4("video.mp4");
 

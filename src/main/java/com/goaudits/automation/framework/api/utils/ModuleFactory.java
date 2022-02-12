@@ -58,10 +58,10 @@ public class ModuleFactory {
 
     public static <T> List<T> parseList(JsonObject jsonObject, Class<T> mClass) throws Exception {
         JsonArray jsonArray= null;
-        if(jsonObject.get("data") == null) {
+        if(jsonObject == null) {
             return null;
         } else {
-            jsonArray = jsonObject.get("data").getAsJsonArray();
+            jsonArray = jsonObject.getAsJsonArray();
             if (jsonArray == null) {
                 return null;
             }

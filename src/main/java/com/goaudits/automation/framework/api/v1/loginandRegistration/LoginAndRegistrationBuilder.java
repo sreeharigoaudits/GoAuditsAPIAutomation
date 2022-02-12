@@ -43,10 +43,40 @@ public class LoginAndRegistrationBuilder {
           actions.loginAndRegistration_actions.signIn.perform(authenticable);
             return this;
         }
-
-
-
-
+        public Builder companyList() throws Exception {
+            actions.loginAndRegistration_actions.companyList.perform(authenticable);
+            return this;
+        }
+        public Builder myAudits() throws Exception {
+            actions.loginAndRegistration_actions.myAudits.perform(authenticable);
+            return this;
+        }
+        public Builder locationList() throws Exception {
+            actions.loginAndRegistration_actions.locationList.perform(authenticable);
+            return this;
+        }
+        public Builder customFieldList() throws Exception {
+            actions.loginAndRegistration_actions.customFieldsList.perform(authenticable);
+            return this;
+        }
+        public Builder auditNameList() throws Exception {
+            actions.loginAndRegistration_actions.auditNameList.perform(authenticable);
+            return this;
+        }
+        public Builder createAudit() throws Exception {
+            actions.loginAndRegistration_actions.createAudit.perform(authenticable);
+            return this;
+        }
+        public Builder performAudit() throws Exception {
+            signIn();
+            myAudits();
+            companyList();
+            locationList();
+            customFieldList();
+            auditNameList();
+            createAudit();
+            return this;
+        }
 
     }
 }
