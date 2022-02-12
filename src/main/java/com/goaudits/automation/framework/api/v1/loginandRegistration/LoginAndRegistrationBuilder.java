@@ -67,6 +67,10 @@ public class LoginAndRegistrationBuilder {
             actions.loginAndRegistration_actions.createAudit.perform(authenticable);
             return this;
         }
+        public Builder sectionList() throws Exception {
+            actions.loginAndRegistration_actions.sectionList.perform(authenticable);
+            return this;
+        }
         public Builder performAudit() throws Exception {
             signIn();
             myAudits();
@@ -75,6 +79,7 @@ public class LoginAndRegistrationBuilder {
             customFieldList();
             auditNameList();
             createAudit();
+            sectionList();
             return this;
         }
 

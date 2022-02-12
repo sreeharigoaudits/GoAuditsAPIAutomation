@@ -23,7 +23,7 @@ public class CustomFieldsList {
      * @param assertPositiveResponse If this is true and the response is not successful the test will fail
      * @return The details of required activity
      */
-    @Step("SignIn")
+    @Step("Custom Filed List")
     public void perform(String uid, String guid, String active, Authenticable auth, boolean assertPositiveResponse) throws Exception {
         actions.masterClient.serverURL = DataHolder.getMasterServerURL_v1();
         client.headers().put("Content-Type", "application/json");

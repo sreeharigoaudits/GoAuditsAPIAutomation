@@ -24,7 +24,7 @@ public class CreateAudit {
      * @param assertPositiveResponse If this is true and the response is not successful the test will fail
      * @return The details of required activity
      */
-    @Step("SignIn")
+    @Step("Create Audit")
     public CreateNewAudit perform(String guid, String uid, String client_id, String audit_type_id, String store_id, String audit_date, String person_seen, String auditor_name, String fin_year,
                                   String quarter, String latitude, String longitude, String start_date, String end_date, String parent_audit_id, String group_audit_id, String status_id, String schedule_uuid, String type_of_audit, String customFieldsList, Authenticable auth, boolean assertPositiveResponse) throws Exception {
         actions.masterClient.serverURL = DataHolder.getMasterServerURL_v1();

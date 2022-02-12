@@ -15,7 +15,7 @@ public class LoginAndRegistration_Actions {
     public final CustomFieldsList customFieldsList;
     public final AuditNameList auditNameList;
     public final CreateAudit createAudit;
-
+public final SectionList sectionList;
     public LoginAndRegistration_Actions(Common_Actions actions) {
 
         this.signIn = new SignIn(actions);
@@ -25,5 +25,6 @@ public class LoginAndRegistration_Actions {
         this.customFieldsList = new CustomFieldsList(actions);
         this.auditNameList = new AuditNameList(actions);
         this.createAudit=new CreateAudit(actions);
+        this.sectionList=new SectionList(actions);
     }
 }

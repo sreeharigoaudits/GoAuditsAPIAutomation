@@ -23,7 +23,7 @@ public class MyAudits {
      * @param assertPositiveResponse If this is true and the response is not successful the test will fail
      * @return The details of required activity
      */
-    @Step("SignIn")
+    @Step("My Audits")
     public void perform(String uid, String guid, String status, Authenticable auth, boolean assertPositiveResponse) throws Exception {
         actions.masterClient.serverURL = DataHolder.getMasterServerURL_v1();
         client.headers().put("Content-Type", "application/json");
