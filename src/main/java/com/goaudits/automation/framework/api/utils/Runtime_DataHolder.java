@@ -1,6 +1,7 @@
 package com.goaudits.automation.framework.api.utils;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonIOException;
 
 import java.util.List;
 
@@ -23,6 +24,14 @@ public class Runtime_DataHolder {
     private static String AuditName;
     private static String SeqNo;
 
+
+    private static int NoOfSections;
+
+
+
+
+
+    private static int NoofQuestions;
     static {
         init();
     }
@@ -106,6 +115,15 @@ public class Runtime_DataHolder {
     public static void setLocationID(String locationID) {
         LocationID = locationID;
     }
+
+
+    public static int getNoofQuestions() {
+        return NoofQuestions;
+    }
+
+    public static void setNoofQuestions(int noofQuestions) {
+        NoofQuestions = noofQuestions;
+    }
     public static void setAuthToken(String authToken) {
         AuthToken = authToken;
     }
@@ -131,6 +149,13 @@ public class Runtime_DataHolder {
 
     public static JsonArray getJsonArrayObject() { return jsonArrayObject; }
 
+    public static int getNoOfSections() {
+        return NoOfSections;
+    }
+
+    public static void setNoOfSections(int noOfSections) {
+        NoOfSections = noOfSections;
+    }
 
 
 

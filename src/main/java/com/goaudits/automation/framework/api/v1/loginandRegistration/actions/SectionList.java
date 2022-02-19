@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class SectionList {
     private final API_Client client;
     private final Common_Actions actions;
+    private int NoOfSections;
 
     public SectionList(Common_Actions actions) {
         this.client = actions.masterClient;
@@ -23,7 +24,7 @@ public class SectionList {
      * @return The details of required activity
      */
     @Step("Section List")
-    public void perform(String uid, String guid, String client_id, String audit_type_id,String store_id,String audit_date,String seq_no, Authenticable auth, boolean assertPositiveResponse) throws Exception {
+    public void perform(String uid, String guid, String client_id, String audit_type_id, String store_id, String audit_date, String seq_no, Authenticable auth, boolean assertPositiveResponse) throws Exception {
         actions.masterClient.serverURL = DataHolder.getMasterServerURL_v1();
         client.headers().put("Content-Type", "application/json");
         client.headers().put("Authorization", "Bearer " + Runtime_DataHolder.getAuthToken());
@@ -35,15 +36,15 @@ public class SectionList {
         client.body().put("audit_date", audit_date);
         client.body().put("seq_no", seq_no);
         client.post("api/audits/section/list");
-
-
+        NoOfSections = client.jsonResponseArray.getAsJsonArray().size();
+        Runtime_DataHolder.setNoOfSections(NoOfSections);
         client.validator().assertPositiveResponse(assertPositiveResponse);
 
 
     }
 
     public void perform(Authenticable auth) throws Exception {
-        perform(Runtime_DataHolder.getUID(),Runtime_DataHolder.getGUID(),Runtime_DataHolder.getCompanyID(),Runtime_DataHolder.getAuditNameID(),Runtime_DataHolder.getLocationID(), DateUtils.getCurrentDate(),Runtime_DataHolder.getSeqNo(), auth, true);
+        perform(Runtime_DataHolder.getUID(), Runtime_DataHolder.getGUID(), Runtime_DataHolder.getCompanyID(), Runtime_DataHolder.getAuditNameID(), Runtime_DataHolder.getLocationID(), DateUtils.getCurrentDate(), Runtime_DataHolder.getSeqNo(), auth, true);
 
     }
 
