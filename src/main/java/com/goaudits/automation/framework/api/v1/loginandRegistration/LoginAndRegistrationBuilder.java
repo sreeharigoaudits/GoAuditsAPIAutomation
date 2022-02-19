@@ -71,6 +71,42 @@ public class LoginAndRegistrationBuilder {
             actions.loginAndRegistration_actions.sectionList.perform(authenticable);
             return this;
         }
+        public Builder getCloudKey() throws Exception {
+            actions.loginAndRegistration_actions.getCloudKey.perform(authenticable);
+            return this;
+        }
+        public Builder questionList() throws Exception {
+            actions.loginAndRegistration_actions.questionList.perform(authenticable);
+            return this;
+        }
+        public Builder questionSave() throws Exception {
+            actions.loginAndRegistration_actions.questionSave.perform(authenticable);
+            return this;
+        }
+        public Builder getCommentsAndSign() throws Exception {
+            actions.loginAndRegistration_actions.getCommentsAndSign.perform(authenticable);
+            return this;
+        }
+        public Builder CommentsAndSignSave() throws Exception {
+            actions.loginAndRegistration_actions.commentsAndSignSave.perform(authenticable);
+            return this;
+        }
+        public Builder previewOpenQuestions() throws Exception {
+            actions.loginAndRegistration_actions.previewOpenQuestions.perform(authenticable);
+            return this;
+        }
+        public Builder getPdf() throws Exception {
+            actions.loginAndRegistration_actions.getPdf.perform(authenticable);
+            return this;
+        }
+        public Builder emailList() throws Exception {
+            actions.loginAndRegistration_actions.emailList.perform(authenticable);
+            return this;
+        }
+        public Builder auditFinalSubmission() throws Exception {
+            actions.loginAndRegistration_actions.auditSubmission.perform(authenticable);
+            return this;
+        }
         public Builder performAudit() throws Exception {
             signIn();
             myAudits();
@@ -80,6 +116,15 @@ public class LoginAndRegistrationBuilder {
             auditNameList();
             createAudit();
             sectionList();
+            getCloudKey();
+            questionList();
+            questionSave();
+            getCommentsAndSign();
+            CommentsAndSignSave();
+            previewOpenQuestions();
+            getPdf();
+            emailList();
+            auditFinalSubmission();
             return this;
         }
 
