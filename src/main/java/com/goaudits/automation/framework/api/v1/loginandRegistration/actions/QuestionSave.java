@@ -25,8 +25,8 @@ public class QuestionSave {
      * @return The details of required activity
      */
     @Step("Question Save")
-    public void perform(String uid, String guid, String client_id, String audit_type_id,String section_id,String group_id,String seq_no,String question_no,String choice_pat_id,String choice_id,
-                        String comments, String free_text, String number_value, String date_time,String temperature_value,String date_value, String is_multichoice, String audit_date, String store_id,
+    public void perform(String uid, String guid, String client_id, String audit_type_id, String section_id, String group_id, String seq_no, String question_no, String choice_pat_id, String choice_id,
+                        String comments, String free_text, String number_value, String date_time, String temperature_value, String date_value, String is_multichoice, String audit_date, String store_id,
                         Authenticable auth, boolean assertPositiveResponse) throws Exception {
         actions.masterClient.serverURL = DataHolder.getMasterServerURL_v1();
         client.headers().put("Content-Type", "application/json");
@@ -51,17 +51,14 @@ public class QuestionSave {
         client.body().put("audit_date", audit_date);
         client.body().put("store_id", store_id);
 
-
         client.post("api/audits/question/save");
-
-
         client.validator().assertPositiveResponse(assertPositiveResponse);
 
 
     }
 
-    public void perform(Authenticable auth) throws Exception {
-        perform(Runtime_DataHolder.getUID(),Runtime_DataHolder.getGUID(),Runtime_DataHolder.getCompanyID(),Runtime_DataHolder.getAuditNameID(),"1","1",Runtime_DataHolder.getSeqNo(),"1","1","1","first Question commetns","",null,null,null,null,"false" ,DateUtils.getCurrentDate(),Runtime_DataHolder.getLocationID(), auth, true);
+    public void perform(String section_id, String group_id, String question_no, String choice_pat_id, String choice_id, String comments, String free_text, String number_value, String date_time, String temperature_value, String date_value, Authenticable auth) throws Exception {
+        perform(Runtime_DataHolder.getUID(), Runtime_DataHolder.getGUID(), Runtime_DataHolder.getCompanyID(), Runtime_DataHolder.getAuditNameID(), section_id, group_id, Runtime_DataHolder.getSeqNo(), question_no, choice_pat_id, choice_id, comments, free_text, number_value, date_time, temperature_value, date_value, "false", DateUtils.getCurrentDate(), Runtime_DataHolder.getLocationID(), auth, true);
 
     }
 
