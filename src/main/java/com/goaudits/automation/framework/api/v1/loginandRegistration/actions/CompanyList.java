@@ -49,7 +49,7 @@ return company;
 
     public void perform(Authenticable auth) throws Exception {
         perform(Runtime_DataHolder.getUID(),Runtime_DataHolder.getGUID(),"1", "false", auth, true);
-System.out.println("the company name is "+Runtime_DataHolder.getCompanyName() );
+
     }
 
 
